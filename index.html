@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <link rel="stylesheet" href="src/index.css" />
+
     <title>AI English/Chinese Poem Generator</title>
   </head>
   <body>
@@ -12,21 +13,18 @@
         <h1>AI English/Chinese Poem Generator🫧</h1>
       </header>
       <main>
-        <form id="poemForm">
+        <form id="poem-generator-form">
           <input
             type="text"
             placeholder="Enter your topic here"
             autofocus
             required
             autocomplete="off"
+            class="instructions"
           />
-          <button type="submit">Submit</button>
+          <button type="submit" class="submit-button">Submit</button>
         </form>
-        <div class="poemContent">
-          乱花渐欲迷人眼
-          <br />
-          浅草才能没马蹄
-        </div>
+        <div class="poem" id="poem"></div>
       </main>
 
       <footer>
@@ -49,5 +47,6 @@
       </footer>
     </div>
     <script src="src/index.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </body>
 </html>
