@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/index.css" />
-
     <title>AI English/Chinese Poem Generator</title>
   </head>
   <body>
@@ -21,10 +22,12 @@
             required
             autocomplete="off"
             class="instructions"
+            id="user-instructions"
           />
           <button type="submit" class="submit-button">Submit</button>
         </form>
-        <div class="poem" id="poem"></div>
+        <div class="hint">i.e: Dim Sum, Shanghai or Panda</div>
+        <div class="poem hidden" id="poem"></div>
       </main>
 
       <footer>
@@ -47,6 +50,5 @@
       </footer>
     </div>
     <script src="src/index.js"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </body>
 </html>
