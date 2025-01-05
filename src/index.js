@@ -19,13 +19,10 @@ function generatePoem(event) {
   )}&context=${encodeURIComponent(context)}&key=${apiKey}`;
 
   let poemElement = document.querySelector("#poem");
-  poemElement.innerHTML = `<div class="generating">⏳ Generating a bilingual 4-line poem about ${userInstructions.value} </div>`;
+  poemElement.innerHTML = `<div id="blink">⏳ Generating a bilingual 4-line poem about ${userInstructions.value} </div>`;
   poemElement.classList.remove("hidden");
 
-  axios.get(apiUrl).then((response) => {
-    console.log("API Response:", response);
-    displayPoem(response);
-  });
+  axios.get(apiUrl).then(displayPoem);
 }
 
 let poemFormElement = document.querySelector("#poem-generator-form");

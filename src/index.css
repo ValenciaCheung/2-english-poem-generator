@@ -32,17 +32,29 @@ h1 {
   line-height: 1.5;
   color: var(--secondary-color);
 }
-
-form {
+.form-container {
   padding: 30px;
   background-color: white;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
-  display: flex;
   margin-bottom: 30px;
   gap: 10px;
 }
+form {
+  display: flex;
+}
 
+.hint {
+  font-size: 12px;
+  color: var(--secondary-color);
+  line-height: 1.5;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
 .instructions {
   padding: 16px;
   border: 1px solid rgba(39, 33, 66, 0.5);
@@ -99,6 +111,19 @@ form {
   content: " .";
   animation: dots 1.5s steps(3, end) infinite;
 }
+#blink {
+  animation: blink 0.8s infinite
+}
+
+@keyframes blink {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
 
 @keyframes dots {
   0% {
@@ -120,6 +145,7 @@ footer {
   font-size: 13px;
   margin-top: 30px;
 }
+
 
 @media (max-width: 768px) {
   .container {
